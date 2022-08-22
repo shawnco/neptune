@@ -26,6 +26,7 @@ describe('Task CRUD ops', () => {
         expect(task.name).to.equal(result.name);
         expect(task.completed).to.equal(result.completed);
         expect(task.calendar).to.equal(result.calendar);
+        expect(task.cron_string).to.equal(result.cron_string);
     });
 
     it('should create a task', async () => {
@@ -34,6 +35,7 @@ describe('Task CRUD ops', () => {
         expect(task.name).to.equal(testTask.name);
         expect(task.completed).to.equal(testTask.completed);
         expect(task.calendar).to.equal(testTask.calendar);
+        expect(task.cron_string).to.equal(testTask.cron_string);
     });
 
     it('should update a task', async () => {
@@ -44,6 +46,7 @@ describe('Task CRUD ops', () => {
         expect(task.name).to.equal(newTask.name);
         expect(task.completed).to.equal(newTask.completed);
         expect(task.calendar).to.equal(newTask.calendar);
+        expect(task.cron_string).to.equal(newTask.cron_string);
     });
 
     it('should delete a task', async () => {

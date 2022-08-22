@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest tests/**/*.test.js"
+    "test": "jest tests/**/task_queue.test.js"
   },
   "keywords": [],
   "author": "",

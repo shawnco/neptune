@@ -18,6 +18,7 @@ module.exports ={
         task.name = data.name || task.name;
         task.completed = data.completed !== null && data.completed !== undefined ? data.completed : task.completed;
         task.calendar = data.calendar || task.calendar;
+        task.cron_string = data.cron_string || task.cron_string;
         return task.save();
     },
 
