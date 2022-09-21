@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest tests/**/task_queue.test.js"
+    "test": "jest tests/services/task.test.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "bull": "^4.8.5",
     "chai": "^4.3.6",
     "express": "^4.18.1",
+    "lodash": "^4.17.21",
     "mocha": "^10.0.0",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",

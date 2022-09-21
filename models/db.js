@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const options = {
     host: 'localhost',
     user: 'root',
-    password: 'Daftpunk1!',
+    password: '',
     db: 'neptune',
     dialect: 'mysql',
     pool: {

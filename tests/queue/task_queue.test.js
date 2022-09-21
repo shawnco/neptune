@@ -9,7 +9,7 @@ const {
     deleteTestTasks
 } = require('./../services/helpers');
 
-describe.only('Task queue ops', () => {
+describe('Task queue ops', () => {
     let queue;
 
     beforeEach(async () => {

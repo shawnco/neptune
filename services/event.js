@@ -16,6 +16,7 @@ module.exports = {
     async update(id, data) {
         const event = await Event.findByPk(id);
         event.name = data.name || event.name;
+        event.duration = data.duration || event.duration;
         return event.save();
     },
 

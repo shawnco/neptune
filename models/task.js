@@ -7,5 +7,10 @@ module.exports = db.define('task', {
     name: Sequelize.STRING,
     completed: Sequelize.BOOLEAN,
     calendar: Sequelize.INTEGER,
-    cron_string: Sequelize.STRING
+    cron_string: Sequelize.STRING,
+    chain: Sequelize.INTEGER,
+    parent: Sequelize.INTEGER,
+    duration: Sequelize.INTEGER,
+    frequency: Sequelize.STRING,
+    movable: Sequelize.BOOLEAN
 }, config.table);

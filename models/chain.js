@@ -2,8 +2,7 @@ const db = require('./db');
 const config = require('./config');
 const Sequelize = require('sequelize').Sequelize;
 
-module.exports = db.define('event', {
+module.exports = db.define('chain', {
     id: config.pk,
-    name: Sequelize.STRING,
-    duration: Sequelize.INTEGER
+    frequency: Sequelize.STRING
 }, config.table);

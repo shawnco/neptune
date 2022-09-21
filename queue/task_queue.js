@@ -15,8 +15,9 @@ class TaskQueue {
 
     async addTask(task) {
         const {id, name, cron_string} = task;
+        console.log(cron_string)
         await this.queue.add(
-            {id, name},
+            {id, name, type: 'task'},
             {
                 repeat: { cron: cron_string }
             }
@@ -32,7 +33,19 @@ class TaskQueue {
     }
 
     async addEvent(event) {
-        // ...
+        const {id, name, cron_string} = event;
+        await this.queue.add(
+            {id, name, type: 'event'},
+            {
+                repeat: { cron: cron_string },
+                removeOnComplete: true
+            }
+        )
+    }
+
+    async rebuildQueue(tasks) {
+        await this.clean();
+        return Promise.all(tasks.map(t => this.addTask(t)));
     }
 }
 
